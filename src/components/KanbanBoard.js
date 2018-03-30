@@ -23,6 +23,9 @@ class KanbanBoard extends React.Component {
         {cards.map((card, index) => {
           return <KanbanCard card={card} key={index} />
         })}
+        <div onClick={() => this.addCard(window.prompt('What would you like to add?'))}>
+          {' '} + card{' '}
+        </div>
       </div>
     )
   }
