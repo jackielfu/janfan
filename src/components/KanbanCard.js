@@ -1,22 +1,14 @@
 import React from 'react';
 
-class KanbanCard extends React.Component {
-  // state = {
-
-  // }
-
-  // add card function
-
-  render() {
-    return (
-      <div style={cardStyle}>
-      </div>
-    )
-  }
+const KanbanCard = ({ card }) => {
+  return <div style={cardStyle}>{card}</div>;
 }
 
 const cardStyle = {
-
+  height: '1.5em',
+  backgroundColor: 'ghostwhite',
+  margin: '.5em',
+  padding: '.5em'
 }
 
 export default KanbanCard;

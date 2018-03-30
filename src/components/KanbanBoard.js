@@ -3,17 +3,26 @@ import KanbanCard from './KanbanCard.js';
 import KanbanHeader from './KanbanHeader.js';
 
 class KanbanBoard extends React.Component {
-  // state = {
+  state = {
+    cards: ['multiple', 'cards', 'here']
+  };
 
-  // }
-
-  // add card function
+  addCard = card => {
+    this.setState({
+      cards: [...this.state.cards, card]
+    });
+  }
 
   render() {
+    const { title, i } = this.props;
+    const { cards } = this.state;
+
     return (
       <div style={boardStyle}>
-        <KanbanHeader />
-        <KanbanCard />
+        <KanbanHeader name={title} key={i} />
+        {cards.map((card, index) => {
+          return <KanbanCard card={card} key={index} />
+        })}
       </div>
     )
   }
@@ -22,7 +31,7 @@ class KanbanBoard extends React.Component {
 const boardStyle = {
   padding: '.5em',
   width: '25%',
-  border: '1px solid red'
+  border: '1px solid gray'
 }
 
 export default KanbanBoard;
