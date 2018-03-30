@@ -14,12 +14,12 @@ class KanbanBoard extends React.Component {
   }
 
   render() {
-    const { title, i } = this.props;
+    const { title, index } = this.props;
     const { cards } = this.state;
 
     return (
       <div style={boardStyle}>
-        <KanbanHeader name={title} key={i} />
+        <KanbanHeader title={title} key={index} />
         {cards.map((card, index) => {
           return <KanbanCard card={card} key={index} />
         })}
@@ -29,6 +29,7 @@ class KanbanBoard extends React.Component {
 }
 
 const boardStyle = {
+  margin: '.5em',
   padding: '.5em',
   width: '25%',
   border: '1px solid gray'

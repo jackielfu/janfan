@@ -1,19 +1,15 @@
 import React from 'react';
 
-const KanbanHeader = ({ title, i }) => {
-  return (
-    <div style={headerStyle(i)}>
-      {title}
-    </div>
-  )
+const KanbanHeader = ({ title, index }) => {
+  return <div style={headerStyle}>{title}</div>
 }
 
-const colors = ["#8e6e95", "#39a59c", "#344759", "#e8741e"];
-
-const headerStyle = i => ({
+const headerStyle = {
+  fontFamily: 'helvetica',
+  fontSize: '1.5em',
   height: '2em',
-  backgroundColor: colors[i],
-  width: '100%', 
-})
+  width: '100%',
+  marginLeft: '.5em'
+}
 
 export default KanbanHeader;

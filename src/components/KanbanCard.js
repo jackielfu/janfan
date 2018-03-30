@@ -5,6 +5,7 @@ const KanbanCard = ({ card }) => {
 }
 
 const cardStyle = {
+  fontFamily: 'helvetica',
   height: '1.5em',
   backgroundColor: 'ghostwhite',
   margin: '.5em',
