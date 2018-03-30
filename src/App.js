@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import KanbanBoard from './components/KanbanBoard.js';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="App-title">Janfan</h1>
+        <h1><center>JANFAN</center></h1>
+        <KanbanBoard />
       </div>
     );
   }
