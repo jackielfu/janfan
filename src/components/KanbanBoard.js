@@ -4,7 +4,7 @@ import KanbanHeader from './KanbanHeader.js';
 
 class KanbanBoard extends React.Component {
   state = {
-    cards: ['multiple', 'cards', 'here']
+    cards: []
   };
 
   addCard = card => {
@@ -23,12 +23,20 @@ class KanbanBoard extends React.Component {
         {cards.map((card, index) => {
           return <KanbanCard card={card} key={index} />
         })}
-        <div onClick={() => this.addCard(window.prompt('What would you like to add?'))}>
-          {' '} + card{' '}
+        <div style={cardStyle} onClick={() => this.addCard(window.prompt('What would you like to add?'))}>
+          {' '} + {' '}
         </div>
       </div>
     )
   }
+}
+
+const cardStyle = {
+  fontFamily: 'helvetica',
+  height: '1.5em',
+  backgroundColor: 'ghostwhite',
+  margin: '.5em',
+  padding: '.5em'
 }
 
 const boardStyle = {

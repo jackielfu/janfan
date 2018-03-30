@@ -3,7 +3,7 @@ import './App.css';
 
 import KanbanBoard from './components/KanbanBoard.js';
 
-const titles = ['one', 'two', 'three', 'four'];
+const titles = ['board one', 'board two', 'board three', 'board four'];
 
 class App extends Component {
   render() {
